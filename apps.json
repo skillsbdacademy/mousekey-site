@@ -1,0 +1,103 @@
+{
+  "site": {
+    "name": "Skills BD App Studio",
+    "tagline": { "en": "Apps by Skills BD Academy", "bn": "স্কিলস বিডি একাডেমির অ্যাপ সংগ্রহ" },
+    "email": "contact.mousekey@gmail.com",
+    "privacyUrl": "https://skillsbdacademy.github.io/mousekey-site/privacy-policy/"
+  },
+  "apps": [
+    {
+      "id": "mousekey",
+      "name": "Wireless Mouse & Keyboard",
+      "icon": "images/icon.png",
+      "developer": "Skills BD Academy",
+      "version": "1.0.0",
+      "short": {
+        "en": "Turn your Android phone into a mouse, keyboard and remote for your Windows PC.",
+        "bn": "আপনার অ্যান্ড্রয়েড ফোনকে বানান উইন্ডোজ পিসির মাউস, কিবোর্ড ও রিমোট।"
+      },
+      "description": {
+        "en": [
+          "Wireless Mouse & Keyboard lets you control your Windows PC from your Android phone, over Wi-Fi or a USB cable. Install the app on your phone and the small server program on your PC, scan the QR code, and you are connected.",
+          "Everything stays between your phone and your own PC. Messages are encrypted, and there is no account and no online server in between."
+        ],
+        "bn": [
+          "Wireless Mouse & Keyboard দিয়ে আপনি Wi-Fi বা USB ক্যাবলের মাধ্যমে অ্যান্ড্রয়েড ফোন থেকে উইন্ডোজ পিসি চালাতে পারবেন। ফোনে অ্যাপ ও পিসিতে ছোট সার্ভার প্রোগ্রাম ইনস্টল করে QR কোড স্ক্যান করলেই কানেক্ট হয়ে যাবে।",
+          "সবকিছু শুধু আপনার ফোন ও আপনার নিজের পিসির মধ্যে থাকে। বার্তা এনক্রিপ্টেড, কোনো অ্যাকাউন্ট লাগে না, মাঝখানে কোনো অনলাইন সার্ভারও নেই।"
+        ]
+      },
+      "features": [
+        { "en": "Touchpad with left and right click, scroll and zoom", "bn": "বাম/ডান ক্লিক, স্ক্রল ও জুমসহ টাচপ্যাড" },
+        { "en": "Keyboard with special keys and voice typing (including Bangla)", "bn": "বিশেষ কী ও ভয়েস টাইপিংসহ কিবোর্ড (বাংলাসহ)" },
+        { "en": "Presentation remote: slides, timer and laser pointer pad", "bn": "প্রেজেন্টেশন রিমোট: স্লাইড, টাইমার ও লেজার প্যাড" },
+        { "en": "Media and volume control", "bn": "মিডিয়া ও ভলিউম নিয়ন্ত্রণ" },
+        { "en": "Shortcuts, macros and app launcher", "bn": "শর্টকাট, ম্যাক্রো ও অ্যাপ চালু করা" },
+        { "en": "Clipboard sharing and file transfer between phone and PC", "bn": "ফোন ও পিসির মধ্যে ক্লিপবোর্ড শেয়ার ও ফাইল পাঠানো" },
+        { "en": "PC screen view on your phone", "bn": "ফোনে পিসির স্ক্রিন দেখা" },
+        { "en": "Optional PIN lock. No ads in the app.", "bn": "ঐচ্ছিক PIN লক। অ্যাপে কোনো বিজ্ঞাপন নেই।" }
+      ],
+      "downloads": {
+        "apk": {
+          "url": "https://github.com/skillsbdacademy/mousekey-site/releases/latest/download/WirelessMouseKeyboard.apk",
+          "size": "50.4 MB"
+        },
+        "server": {
+          "url": "https://github.com/skillsbdacademy/mousekey-site/releases/latest/download/PhoneMouseSetup.exe",
+          "size": "22.2 MB"
+        }
+      },
+      "requirements": {
+        "en": "Android phone, and a Windows PC (tested on Windows 11)",
+        "bn": "অ্যান্ড্রয়েড ফোন ও উইন্ডোজ পিসি (Windows 11-এ পরীক্ষিত)"
+      },
+      "screenshots": [
+        { "file": "images/01-connect.webp", "caption": { "en": "Connect with QR, USB or by hand", "bn": "QR, USB বা হাতে লিখে কানেক্ট" } },
+        { "file": "images/02-touchpad.webp", "caption": { "en": "Touchpad", "bn": "টাচপ্যাড" } },
+        { "file": "images/03-keyboard.webp", "caption": { "en": "Keyboard and voice typing", "bn": "কিবোর্ড ও ভয়েস টাইপিং" } },
+        { "file": "images/04-remote-slides.webp", "caption": { "en": "Slide remote", "bn": "স্লাইড রিমোট" } },
+        { "file": "images/05-remote-timer.webp", "caption": { "en": "Timer and laser pad", "bn": "টাইমার ও লেজার প্যাড" } },
+        { "file": "images/06-remote-media.webp", "caption": { "en": "Media and volume", "bn": "মিডিয়া ও ভলিউম" } },
+        { "file": "images/07-shortcuts.webp", "caption": { "en": "Shortcuts", "bn": "শর্টকাট" } },
+        { "file": "images/08-macros.webp", "caption": { "en": "Macros", "bn": "ম্যাক্রো" } },
+        { "file": "images/09-apps.webp", "caption": { "en": "Launch PC apps", "bn": "পিসির অ্যাপ চালু করা" } },
+        { "file": "images/10-clipboard.webp", "caption": { "en": "Clipboard sharing", "bn": "ক্লিপবোর্ড শেয়ার" } },
+        { "file": "images/11-files.webp", "caption": { "en": "File transfer", "bn": "ফাইল ট্রান্সফার" } }
+      ],
+      "install": [
+        { "en": "On your PC, download and run the PC server installer. If Windows SmartScreen warns you, click More info, then Run anyway (the installer is not code-signed yet).", "bn": "পিসিতে পিসি সার্ভার ইনস্টলার ডাউনলোড করে চালান। Windows SmartScreen সতর্ক করলে More info চেপে Run anyway চাপুন (ইনস্টলারে এখনো কোড সাইনিং নেই)।" },
+        { "en": "Start the server. If Windows Firewall asks, allow access on private networks. A QR code appears.", "bn": "সার্ভার চালু করুন। Windows Firewall জিজ্ঞেস করলে প্রাইভেট নেটওয়ার্কে অনুমতি দিন। একটি QR কোড আসবে।" },
+        { "en": "On your phone, download the APK and open it. Android will ask you to allow installing apps from this source. Allow it for your browser only for this install.", "bn": "ফোনে APK ডাউনলোড করে খুলুন। Android এই উৎস থেকে অ্যাপ ইনস্টলের অনুমতি চাইবে, অনুমতি দিন। ইনস্টল শেষে চাইলে অনুমতি বন্ধ করে দিতে পারেন।" },
+        { "en": "Make sure the phone and PC are on the same Wi-Fi, open the app and tap Connect with QR scan, then scan the code on your PC.", "bn": "ফোন ও পিসি একই Wi-Fi-তে আছে কি না দেখুন, অ্যাপ খুলে QR স্ক্যান করে কানেক্ট চাপুন, তারপর পিসির কোডটি স্ক্যান করুন।" },
+        { "en": "For USB: turn on USB debugging on the phone, plug it into the PC and tap Connect with USB.", "bn": "USB-র জন্য: ফোনে USB debugging চালু করে পিসিতে লাগান এবং USB দিয়ে কানেক্ট চাপুন।" }
+      ],
+      "faq": [
+        {
+          "q": { "en": "Why does my phone or PC show a security warning?", "bn": "ফোন বা পিসি সতর্কতা দেখাচ্ছে কেন?" },
+          "a": { "en": "The app is not on Google Play yet, so Android asks permission to install from your browser. The PC installer is not code-signed yet, so Windows SmartScreen warns about unknown publishers. Download only from this site.", "bn": "অ্যাপটি এখনো Google Play-তে নেই, তাই Android ব্রাউজার থেকে ইনস্টলের অনুমতি চায়। পিসি ইনস্টলারে এখনো কোড সাইনিং নেই, তাই Windows SmartScreen অজানা প্রকাশক বলে সতর্ক করে। শুধু এই সাইট থেকেই ডাউনলোড করুন।" }
+        },
+        {
+          "q": { "en": "Does it send my data online?", "bn": "আমার ডেটা কি অনলাইনে যায়?" },
+          "a": { "en": "No. Data goes only between your phone and your own PC, encrypted, and we run no server. Voice typing uses your phone's Android speech service, which may use the internet depending on your device.", "bn": "না। ডেটা শুধু আপনার ফোন ও নিজের পিসির মধ্যে এনক্রিপ্টেড অবস্থায় যায়, আমাদের কোনো সার্ভার নেই। ভয়েস টাইপিং ফোনের Android স্পিচ সার্ভিস ব্যবহার করে, ডিভাইসভেদে এতে ইন্টারনেট লাগতে পারে।" }
+        },
+        {
+          "q": { "en": "It does not connect. What should I check?", "bn": "কানেক্ট হচ্ছে না, কী দেখব?" },
+          "a": { "en": "Check that the server is running, both devices are on the same Wi-Fi, and Windows Firewall allows the server on private networks. You can also try USB.", "bn": "সার্ভার চালু আছে কি না, দুই ডিভাইস একই Wi-Fi-তে আছে কি না, আর Windows Firewall প্রাইভেট নেটওয়ার্কে সার্ভারকে অনুমতি দিয়েছে কি না দেখুন। USB দিয়েও চেষ্টা করতে পারেন।" }
+        },
+        {
+          "q": { "en": "Does it work with Mac, Linux or iPhone?", "bn": "Mac, Linux বা iPhone-এ চলবে?" },
+          "a": { "en": "Not yet. Right now it works with an Android phone and a Windows PC.", "bn": "এখনো না। এখন শুধু অ্যান্ড্রয়েড ফোন ও উইন্ডোজ পিসিতে চলে।" }
+        },
+        {
+          "q": { "en": "Is it free?", "bn": "এটা কি বিনামূল্যে?" },
+          "a": { "en": "Yes, you can download and use it for free.", "bn": "হ্যাঁ, বিনামূল্যে ডাউনলোড ও ব্যবহার করা যায়।" }
+        }
+      ],
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "notes": { "en": "First release: touchpad, keyboard and voice typing, presentation remote, shortcuts and macros, clipboard and file transfer, PC screen view, PIN lock.", "bn": "প্রথম সংস্করণ: টাচপ্যাড, কিবোর্ড ও ভয়েস টাইপিং, প্রেজেন্টেশন রিমোট, শর্টকাট ও ম্যাক্রো, ক্লিপবোর্ড ও ফাইল ট্রান্সফার, পিসি স্ক্রিন ভিউ, PIN লক।" }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App – Skills BD App Studio</title>
+  <meta name="description" content="Download and install guide for apps by Skills BD Academy.">
+  <meta name="theme-color" content="#0F1220">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="wrap" id="page"></main>
+  <div id="site-footer"></div>
+
+  <script>
+    var P = {
+      en: {
+        back: "All apps", notFound: "This app was not found.",
+        version: "Version", requires: "Requires",
+        dlApk: "Download APK (Android)", dlServer: "Download PC server (Windows)",
+        warn: "This app is not on Google Play yet. Android may ask your permission to install from your browser, and Windows SmartScreen may warn about the PC installer: click More info, then Run anyway. Download only from this site.",
+        shots: "Screenshots", about: "About this app", features: "Features",
+        install: "How to install", faq: "Questions and answers", changes: "What’s new"
+      },
+      bn: {
+        back: "সব অ্যাপ", notFound: "অ্যাপটি পাওয়া যায়নি।",
+        version: "সংস্করণ", requires: "প্রয়োজন",
+        dlApk: "APK ডাউনলোড (অ্যান্ড্রয়েড)", dlServer: "পিসি সার্ভার ডাউনলোড (Windows)",
+        warn: "অ্যাপটি এখনো Google Play-তে নেই। তাই Android ব্রাউজার থেকে ইনস্টলের অনুমতি চাইতে পারে, আর Windows SmartScreen পিসি ইনস্টলার নিয়ে সতর্ক করতে পারে: More info চেপে Run anyway চাপুন। শুধু এই সাইট থেকেই ডাউনলোড করুন।",
+        shots: "স্ক্রিনশট", about: "অ্যাপ সম্পর্কে", features: "সুবিধাসমূহ",
+        install: "ইনস্টল করার নিয়ম", faq: "প্রশ্ন ও উত্তর", changes: "নতুন কী"
+      }
+    };
+
+    function render(data) {
+      var L = P[Site.lang], e = Site.esc, t = Site.t;
+      var id = new URLSearchParams(location.search).get("id");
+      var app = data.apps.filter(function (a) { return a.id === id; })[0];
+      var page = document.getElementById("page");
+
+      if (!app) {
+        page.innerHTML = '<p class="note" style="margin-top:32px">' + e(L.notFound) +
+          ' <a href="index.html">' + e(L.back) + '</a></p>';
+        return;
+      }
+      document.title = app.name + " – " + data.site.name;
+
+      var h = '<p style="padding-top:20px"><a href="index.html">← ' + e(L.back) + '</a></p>';
+
+      h += '<section class="app-head"><img src="' + e(app.icon) + '" alt="" width="128" height="128"><div>' +
+        '<h1>' + e(app.name) + '</h1><div class="dev">' + e(app.developer) + '</div>' +
+        '<div class="facts">' +
+        '<span class="fact">' + e(L.version) + ' ' + e(app.version) + '</span>' +
+        '<span class="fact">APK ' + e(app.downloads.apk.size) + '</span>' +
+        '<span class="fact">PC ' + e(app.downloads.server.size) + '</span>' +
+        '<span class="fact">' + e(L.requires) + ': ' + e(t(app.requirements)) + '</span>' +
+        '</div></div></section>';
+
+      h += '<p class="prose" style="color:var(--muted)">' + e(t(app.short)) + '</p>';
+
+      h += '<div class="dl">' +
+        '<a class="btn btn-main" href="' + e(app.downloads.apk.url) + '">' + e(L.dlApk) + ' · ' + e(app.downloads.apk.size) + '</a>' +
+        '<a class="btn btn-alt" href="' + e(app.downloads.server.url) + '">' + e(L.dlServer) + ' · ' + e(app.downloads.server.size) + '</a>' +
+        '</div><div class="note prose">' + e(L.warn) + '</div>';
+
+      h += '<section class="block"><h2>' + e(L.shots) + '</h2><div class="shots">';
+      app.screenshots.forEach(function (s) {
+        h += '<img src="' + e(s.file) + '" alt="' + e(t(s.caption)) + '" loading="lazy" height="460">';
+      });
+      h += '</div></section>';
+
+      h += '<section class="block"><h2>' + e(L.about) + '</h2><div class="prose">';
+      t(app.description).forEach(function (p) { h += '<p>' + e(p) + '</p>'; });
+      h += '</div></section>';
+
+      h += '<section class="block"><h2>' + e(L.features) + '</h2><div class="card prose">' +
+        '<ul style="padding-left:20px;display:grid;gap:6px">';
+      app.features.forEach(function (f) { h += '<li>' + e(t(f)) + '</li>'; });
+      h += '</ul></div></section>';
+
+      h += '<section class="block"><h2>' + e(L.install) + '</h2><ol class="steps">';
+      app.install.forEach(function (s) { h += '<li>' + e(t(s)) + '</li>'; });
+      h += '</ol></section>';
+
+      h += '<section class="block"><h2>' + e(L.faq) + '</h2>';
+      app.faq.forEach(function (f) {
+        h += '<details><summary>' + e(t(f.q)) + '</summary><p>' + e(t(f.a)) + '</p></details>';
+      });
+      h += '</section>';
+
+      h += '<section class="block"><h2>' + e(L.changes) + '</h2><div class="log">';
+      app.changelog.forEach(function (c) {
+        h += '<h3>' + e(c.version) + '</h3><p>' + e(t(c.notes)) + '</p>';
+      });
+      h += '</div></section>';
+
+      /* Ad slot: away from the download buttons. After Adsterra approval, paste the banner code inside and add class "on". */
+      h += '<div class="ad-slot" id="ad-app"></div>';
+
+      page.innerHTML = h;
+    }
+
+    Site.init(render);
+  </script>
+</body>
+</html>
