@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="site.js"></script>
+  <script src="ads.js"></script>
 </head>
 <body>
   <div id="site-header"></div>
@@ -24,8 +25,8 @@
 
     <div class="grid" id="grid"></div>
 
-    <!-- Ad slot: after Adsterra approval, paste the banner code inside this div and add class "on" -->
-    <div class="ad-slot" id="ad-home"></div>
+    <!-- Native banner: shown only on the approved ad hostname (see ads.js) -->
+    <script>Ads.native();</script>
   </main>
 
   <div id="site-footer"></div>

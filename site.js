@@ -5,7 +5,7 @@
       langBtn: "বাংলা", toLight: "Light", toDark: "Dark",
       heroTitle: "Skills BD App Studio",
       heroText: "Download our apps directly. Every app page has install steps and answers to common questions.",
-      version: "Version", privacy: "Privacy policy", contact: "Contact", about: "About", terms: "Terms of use",
+      version: "Version", privacy: "App privacy policy", sitePrivacy: "Website privacy & cookies", contact: "Contact", about: "About", terms: "Terms of use",
       footer: "© 2026 Skills BD Academy",
       loadErr: "The app list could not be loaded. Check your internet connection and reload the page."
     },
@@ -13,7 +13,7 @@
       langBtn: "English", toLight: "হালকা", toDark: "গাঢ়",
       heroTitle: "Skills BD App Studio",
       heroText: "আমাদের অ্যাপ সরাসরি ডাউনলোড করুন। প্রতিটি অ্যাপের পাতায় ইনস্টলের ধাপ ও সাধারণ প্রশ্নের উত্তর আছে।",
-      version: "সংস্করণ", privacy: "গোপনীয়তা নীতি", contact: "যোগাযোগ", about: "আমাদের সম্পর্কে", terms: "ব্যবহারের শর্ত",
+      version: "সংস্করণ", privacy: "অ্যাপের গোপনীয়তা নীতি", sitePrivacy: "ওয়েবসাইটের গোপনীয়তা ও কুকি", contact: "যোগাযোগ", about: "আমাদের সম্পর্কে", terms: "ব্যবহারের শর্ত",
       footer: "© 2026 Skills BD Academy",
       loadErr: "অ্যাপের তালিকা লোড করা যায়নি। ইন্টারনেট সংযোগ দেখে পাতাটি আবার লোড করুন।"
     }
@@ -78,6 +78,7 @@
           '<div class="links">' +
           '<a href="about.html">' + esc(UI[lang].about) + '</a>' +
           '<a href="terms.html">' + esc(UI[lang].terms) + '</a>' +
+          '<a href="site-privacy.html">' + esc(UI[lang].sitePrivacy) + '</a>' +
           '<a href="' + esc(data.site.privacyUrl) + '">' + esc(UI[lang].privacy) + '</a>' +
           '<a href="mailto:' + esc(data.site.email) + '">' + esc(UI[lang].contact) + ': ' + esc(data.site.email) + '</a>' +
           '</div><div>' + esc(UI[lang].footer) + ' · ' + esc(Site.t(data.site.tagline)) + '</div>' +

@@ -12,10 +12,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="site.js"></script>
+  <script src="ads.js"></script>
 </head>
 <body>
   <div id="site-header"></div>
-  <main class="wrap" id="page"></main>
+  <main class="wrap" id="page" style="min-height:70vh"></main>
+  <!-- 300x250 banner at the end of the page, far from the download buttons -->
+  <div class="wrap"><script>Ads.banner300();</script></div>
   <div id="site-footer"></div>
 
   <script>
@@ -99,9 +102,6 @@
         h += '<h3>' + e(c.version) + '</h3><p>' + e(t(c.notes)) + '</p>';
       });
       h += '</div></section>';
-
-      /* Ad slot: away from the download buttons. After Adsterra approval, paste the banner code inside and add class "on". */
-      h += '<div class="ad-slot" id="ad-app"></div>';
 
       page.innerHTML = h;
     }
