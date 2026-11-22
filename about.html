@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About – Skills BD App Studio</title>
+  <meta name="description" content="About Skills BD App Studio and the apps made by Skills BD Academy.">
+  <meta name="theme-color" content="#0F1220">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="wrap" id="page"></main>
+  <div id="site-footer"></div>
+
+  <script>
+    var DOC = {
+  "en": {
+    "title": "About Skills BD App Studio",
+    "contactLabel": "Questions or feedback? Write to us at",
+    "sections": [
+      {
+        "h": "Who we are",
+        "p": [
+          "Skills BD App Studio is the home of apps made by Skills BD Academy. Each app has its own page with a direct download, screenshots, an install guide and answers to common questions."
+        ]
+      },
+      {
+        "h": "What we build",
+        "p": [
+          "Our first app, Wireless Mouse & Keyboard, turns an Android phone into a mouse, keyboard and remote for a Windows PC. We plan to add more useful apps over time."
+        ]
+      },
+      {
+        "h": "How we work",
+        "p": [
+          "We keep our apps simple and private. The apps do not need an account, and Wireless Mouse & Keyboard sends data only between your phone and your own PC.",
+          "Only apps made by Skills BD Academy are listed here."
+        ]
+      }
+    ]
+  },
+  "bn": {
+    "title": "Skills BD App Studio সম্পর্কে",
+    "contactLabel": "প্রশ্ন বা মতামত থাকলে লিখুন:",
+    "sections": [
+      {
+        "h": "আমরা কারা",
+        "p": [
+          "Skills BD App Studio হলো Skills BD Academy-র তৈরি অ্যাপগুলোর ঠিকানা। প্রতিটি অ্যাপের নিজস্ব পাতায় সরাসরি ডাউনলোড, স্ক্রিনশট, ইনস্টল গাইড ও সাধারণ প্রশ্নের উত্তর আছে।"
+        ]
+      },
+      {
+        "h": "আমরা কী বানাই",
+        "p": [
+          "আমাদের প্রথম অ্যাপ Wireless Mouse & Keyboard অ্যান্ড্রয়েড ফোনকে উইন্ডোজ পিসির মাউস, কিবোর্ড ও রিমোট বানিয়ে দেয়। সময়ের সাথে আমরা আরও কাজের অ্যাপ যোগ করব।"
+        ]
+      },
+      {
+        "h": "আমাদের কাজের ধরন",
+        "p": [
+          "আমরা অ্যাপগুলো সহজ ও ব্যক্তিগত রাখি। অ্যাপে কোনো অ্যাকাউন্ট লাগে না, আর Wireless Mouse & Keyboard শুধু আপনার ফোন ও আপনার নিজের পিসির মধ্যে ডেটা পাঠায়।",
+          "এখানে শুধু Skills BD Academy-র তৈরি অ্যাপই তালিকাভুক্ত থাকে।"
+        ]
+      }
+    ]
+  }
+};
+
+    function render(data) {
+      var e = Site.esc, d = DOC[Site.lang];
+      var h = '<section class="hero" style="padding-bottom:8px"><h1 style="max-width:none;font-size:clamp(1.8rem,4.5vw,2.6rem)">' + e(d.title) + '</h1>';
+      if (d.updated) h += '<p style="font-size:.95rem">' + e(d.updated) + '</p>';
+      h += '</section>';
+      d.sections.forEach(function (s) {
+        h += '<section class="block"><h2>' + e(s.h) + '</h2><div class="prose">';
+        s.p.forEach(function (t) { h += '<p>' + e(t) + '</p>'; });
+        h += '</div></section>';
+      });
+      h += '<section class="block"><div class="prose"><p>' + e(d.contactLabel) + ' <a href="mailto:' + e(data.site.email) + '">' + e(data.site.email) + '</a></p></div></section>';
+      document.title = d.title + " – " + data.site.name;
+      document.getElementById("page").innerHTML = h;
+    }
+    Site.init(render);
+  </script>
+</body>
+</html>

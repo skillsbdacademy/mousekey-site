@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of use – Skills BD App Studio</title>
+  <meta name="description" content="Terms of use for Skills BD App Studio.">
+  <meta name="theme-color" content="#0F1220">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="wrap" id="page"></main>
+  <div id="site-footer"></div>
+
+  <script>
+    var DOC = {
+  "en": {
+    "title": "Terms of use",
+    "updated": "Last updated: November 22, 2026",
+    "contactLabel": "Questions about these terms? Write to us at",
+    "sections": [
+      {
+        "h": "Using this website",
+        "p": [
+          "This website offers downloads of apps made by Skills BD Academy. You may use it for personal, lawful purposes."
+        ]
+      },
+      {
+        "h": "Software is provided as is",
+        "p": [
+          "The apps and the PC server are provided without any warranty. We work to make them reliable, but we cannot promise they will work on every device or never cause problems. You use them at your own risk, so keep backups of important files."
+        ]
+      },
+      {
+        "h": "Download only from here",
+        "p": [
+          "Our official downloads are on this website and the GitHub Releases pages it links to. We are not responsible for files you get from other sites."
+        ]
+      },
+      {
+        "h": "Your PC and your pairing key",
+        "p": [
+          "The PC server lets a paired phone control your computer. Install it only on a PC you own or are allowed to control, and keep your pairing key private."
+        ]
+      },
+      {
+        "h": "Ads and other websites",
+        "p": [
+          "This website may show ads from third-party ad networks and may link to other websites such as GitHub. We do not control those services or their content."
+        ]
+      },
+      {
+        "h": "Changes",
+        "p": [
+          "We may update these terms. The date at the top shows when they were last changed."
+        ]
+      }
+    ]
+  },
+  "bn": {
+    "title": "ব্যবহারের শর্ত",
+    "updated": "সর্বশেষ হালনাগাদ: ২২ নভেম্বর ২০২৬",
+    "contactLabel": "এই শর্ত নিয়ে প্রশ্ন থাকলে লিখুন:",
+    "sections": [
+      {
+        "h": "এই ওয়েবসাইট ব্যবহার",
+        "p": [
+          "এই ওয়েবসাইটে Skills BD Academy-র তৈরি অ্যাপ ডাউনলোডের ব্যবস্থা আছে। আপনি এটি ব্যক্তিগত ও বৈধ উদ্দেশ্যে ব্যবহার করতে পারবেন।"
+        ]
+      },
+      {
+        "h": "সফটওয়্যার যেমন আছে তেমন",
+        "p": [
+          "অ্যাপ ও পিসি সার্ভার কোনো গ্যারান্টি ছাড়া দেওয়া হয়। আমরা এগুলো নির্ভরযোগ্য রাখার চেষ্টা করি, কিন্তু সব ডিভাইসে চলবে বা কোনো সমস্যা করবে না, এমন নিশ্চয়তা দিতে পারি না। ব্যবহারের ঝুঁকি আপনার, তাই জরুরি ফাইলের ব্যাকআপ রাখুন।"
+        ]
+      },
+      {
+        "h": "শুধু এখান থেকে ডাউনলোড করুন",
+        "p": [
+          "আমাদের অফিসিয়াল ডাউনলোড এই ওয়েবসাইটে এবং এখান থেকে যে GitHub Releases পাতায় যাওয়া যায় সেখানে আছে। অন্য সাইট থেকে পাওয়া ফাইলের দায় আমাদের নয়।"
+        ]
+      },
+      {
+        "h": "আপনার পিসি ও পেয়ারিং কী",
+        "p": [
+          "পিসি সার্ভার পেয়ার করা ফোনকে আপনার কম্পিউটার চালাতে দেয়। এটি শুধু নিজের বা নিয়ন্ত্রণের অনুমতি আছে এমন পিসিতে ইনস্টল করুন, আর পেয়ারিং কী গোপন রাখুন।"
+        ]
+      },
+      {
+        "h": "বিজ্ঞাপন ও অন্য ওয়েবসাইট",
+        "p": [
+          "এই ওয়েবসাইটে তৃতীয় পক্ষের বিজ্ঞাপন নেটওয়ার্কের বিজ্ঞাপন দেখানো হতে পারে, আর GitHub-এর মতো অন্য ওয়েবসাইটের লিংক থাকতে পারে। ওই সেবা ও তাদের কনটেন্ট আমাদের নিয়ন্ত্রণে নেই।"
+        ]
+      },
+      {
+        "h": "পরিবর্তন",
+        "p": [
+          "আমরা এই শর্ত হালনাগাদ করতে পারি। উপরের তারিখ দেখে বোঝা যাবে কবে শেষ বদলানো হয়েছে।"
+        ]
+      }
+    ]
+  }
+};
+
+    function render(data) {
+      var e = Site.esc, d = DOC[Site.lang];
+      var h = '<section class="hero" style="padding-bottom:8px"><h1 style="max-width:none;font-size:clamp(1.8rem,4.5vw,2.6rem)">' + e(d.title) + '</h1>';
+      if (d.updated) h += '<p style="font-size:.95rem">' + e(d.updated) + '</p>';
+      h += '</section>';
+      d.sections.forEach(function (s) {
+        h += '<section class="block"><h2>' + e(s.h) + '</h2><div class="prose">';
+        s.p.forEach(function (t) { h += '<p>' + e(t) + '</p>'; });
+        h += '</div></section>';
+      });
+      h += '<section class="block"><div class="prose"><p>' + e(d.contactLabel) + ' <a href="mailto:' + e(data.site.email) + '">' + e(data.site.email) + '</a></p></div></section>';
+      document.title = d.title + " – " + data.site.name;
+      document.getElementById("page").innerHTML = h;
+    }
+    Site.init(render);
+  </script>
+</body>
+</html>
