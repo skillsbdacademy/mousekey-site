@@ -2,7 +2,7 @@
 (function () {
   var UI = {
     en: {
-      langBtn: "বাংলা", toLight: "Light theme", toDark: "Dark theme",
+      langBtn: "বাংলা", toLight: "Light", toDark: "Dark",
       heroTitle: "Skills BD App Studio",
       heroText: "Download our apps directly. Every app page has install steps and answers to common questions.",
       version: "Version", privacy: "Privacy policy", contact: "Contact",
@@ -10,7 +10,7 @@
       loadErr: "The app list could not be loaded. Check your internet connection and reload the page."
     },
     bn: {
-      langBtn: "English", toLight: "হালকা থিম", toDark: "গাঢ় থিম",
+      langBtn: "English", toLight: "হালকা", toDark: "গাঢ়",
       heroTitle: "Skills BD App Studio",
       heroText: "আমাদের অ্যাপ সরাসরি ডাউনলোড করুন। প্রতিটি অ্যাপের পাতায় ইনস্টলের ধাপ ও সাধারণ প্রশ্নের উত্তর আছে।",
       version: "সংস্করণ", privacy: "গোপনীয়তা নীতি", contact: "যোগাযোগ",

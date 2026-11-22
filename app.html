@@ -65,8 +65,8 @@
       h += '<p class="prose" style="color:var(--muted)">' + e(t(app.short)) + '</p>';
 
       h += '<div class="dl">' +
-        '<a class="btn btn-main" href="' + e(app.downloads.apk.url) + '">' + e(L.dlApk) + ' · ' + e(app.downloads.apk.size) + '</a>' +
-        '<a class="btn btn-alt" href="' + e(app.downloads.server.url) + '">' + e(L.dlServer) + ' · ' + e(app.downloads.server.size) + '</a>' +
+        '<a class="btn btn-main btn-dl" href="' + e(app.downloads.apk.url) + '"><span>' + e(L.dlApk) + '</span><small>' + e(app.downloads.apk.size) + '</small></a>' +
+        '<a class="btn btn-alt btn-dl" href="' + e(app.downloads.server.url) + '"><span>' + e(L.dlServer) + '</span><small>' + e(app.downloads.server.size) + '</small></a>' +
         '</div><div class="note prose">' + e(L.warn) + '</div>';
 
       h += '<section class="block"><h2>' + e(L.shots) + '</h2><div class="shots">';
